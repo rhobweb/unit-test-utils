@@ -1,6 +1,6 @@
 {
   "name": "@rhobweb/unit-test-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node CJS module unit test utilities",
   "main": "./src/index.js",
   "devDependencies": {
@@ -19,7 +19,11 @@
     "url": "git+https://github.com/rhobweb/unit-test-utils.git"
   },
   "keywords": [
-    "unit test"
+    "unit test",
+    "mocha",
+    "chai",
+    "sinon",
+    "rewire"
   ],
   "author": "Rhob Weber <rhobert.weber@gmail.com>",
   "license": "MIT",
@@ -28,6 +32,8 @@
   },
   "homepage": "https://github.com/rhobweb/unit-test-utils#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "coverage": "nyc report --reporter=lcov",
+    "lint": "eslint src/*.js test/unit/*.js",
+    "test": "nyc --statements 100 -- mocha -- --check-leaks --timeout 3000 ./test/unit/**/*.spec.js"
   }
 }
