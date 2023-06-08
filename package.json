@@ -1,10 +1,8 @@
 {
-  "name": "@rhobweb.js/unit-test-utils",
-  "version": "0.1.0",
+  "name": "@rhobweb/unit-test-utils",
+  "version": "0.1.1",
   "description": "Node CJS module unit test utilities",
   "main": "./src/index.js",
-  "dependencies": {
-  },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.8",
     "chai": "^4.3.7",
@@ -24,5 +22,12 @@
     "unit test"
   ],
   "author": "Rhob Weber <rhobert.weber@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhobweb/unit-test-utils/issues"
+  },
+  "homepage": "https://github.com/rhobweb/unit-test-utils#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

@@ -1,13 +1,10 @@
 /**
- * To enable full error output from chai, do the following in the test:
- *    const chai          = require( 'chai' );
- *    const { expect }    = chai;
- *    chai.config.truncateThreshold = 0; // Do not truncate errors
  */
 'use strict';
 
 const sinon  = require( 'sinon' );
 const rewire = require( 'rewire' );
+const path   = require( 'node:path' );
 
 // To enable full error output from chai, enable the following here or in the test
 // const chai          = require( 'chai' );
@@ -15,10 +12,11 @@ const rewire = require( 'rewire' );
 
 class UnitTestUtils {
 
-  constructor( { testModulePathname, arrUnreqire = [] } ) {
-    this.testModulePathname = testModulePathname;
+  constructor( { testModulePathname, arrUnreqire = [], dirPathname = '' } ) {
+    const resolveModule     = m => require.resolve( path.join( dirPathname, m ) );
+    this.arrUnrequire       = [ testModulePathname, ...arrUnreqire ].map( e => resolveModule( e ) );
+    this.testModulePathname = this.arrUnrequire[ 0 ];
     this.sandbox            = null;
-    this.arrUnrequire       = [ testModulePathname, ...arrUnreqire ].map( e => require.resolve( e ) );
   }
 
   /**
