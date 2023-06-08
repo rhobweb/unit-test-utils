@@ -1,6 +1,6 @@
 {
   "name": "@rhobweb/unit-test-utils",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Node CJS module unit test utilities",
   "main": "./src/index.js",
   "devDependencies": {

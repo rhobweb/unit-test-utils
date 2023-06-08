@@ -1,0 +1,22 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true,
+    "jquery": true,
+    "mocha": true
+  },
+  "parser": "@babel/eslint-parser",
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "rules": {
+    "semi": ["error", "always"],
+    "comma-dangle": 0,
+    "spaced-comment": 0,
+    "key-spacing": 0
+  }
+}
