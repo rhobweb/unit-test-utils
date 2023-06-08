@@ -1,0 +1,28 @@
+{
+  "name": "@rhobweb.js/unit-test-utils",
+  "version": "0.1.0",
+  "description": "Node CJS module unit test utilities",
+  "main": "./src/index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.8",
+    "chai": "^4.3.7",
+    "eslint": "^8.41.0",
+    "mocha": "^10.2.0",
+    "rewire": "^6.0.0",
+    "sinon": "^15.1.0"
+  },
+  "engines": {
+    "node": ">=16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhobweb/unit-test-utils.git"
+  },
+  "keywords": [
+    "unit test"
+  ],
+  "author": "Rhob Weber <rhobert.weber@gmail.com>",
+  "license": "MIT"
+}
